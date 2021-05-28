@@ -1,0 +1,16 @@
+<section class="login-page" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card >
+  <form fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" #f="ngForm">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input type="email" placeholder="example@example.com" matInput ngModel name="email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" ngModel name="password" required>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Login</button>
+    <mat-label>Don't have an account? <a routerLink="/signup">Signup</a></mat-label>
+  </form>
+</mat-card>
+</section>

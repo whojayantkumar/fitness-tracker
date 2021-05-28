@@ -1,0 +1,13 @@
+/* section{
+  display: block;
+  justify-content: center;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  margin: 300px;
+  padding: 30px;
+} */
+
+mat-form-field{
+  min-width: 300px;
+  max-width: 350px;
+}

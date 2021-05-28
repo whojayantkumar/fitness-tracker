@@ -1,0 +1,11 @@
+<div class="welcome" fxLayout="column" fxLayout.gt-xs fxLayoutGap="10px" fxLayoutAlign="center center">
+  <mat-card  fxLayout="column" fxLayoutAlign="center center"  *ngFor="let item of items">
+    <mat-card-header >
+      <mat-card-title>{{item.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{item.content}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+

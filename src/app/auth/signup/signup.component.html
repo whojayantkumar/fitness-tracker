@@ -1,0 +1,66 @@
+<mat-card fxLayout="column" fxLayoutAlign="center center" style="max-width: 350px;">
+  <mat-card-content fxLayoutAlign="center center" style="max-width: 350px;">
+    <section class="signup-form">
+      <form
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="5px"
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f)"
+      >
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            color="accent"
+            ngModel
+            name="email"
+            email
+            required
+            #emailInput="ngModel"
+          />
+          <mat-hint>This field is required.</mat-hint>
+          <mat-error *ngIf="emailInput.hasError('required')"
+            >Field must not be empty.</mat-error
+          >
+          <mat-error *ngIf="!emailInput.hasError('required')"
+            >Email is invalid.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field hintLabel="should be at least 6 characters long">
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            ngModel
+            name="password"
+            required
+            minlength="6"
+            #pw="ngModel"
+          />
+          <mat-hint align="end">{{ pw.value?.length }}/6</mat-hint>
+          <mat-error>Has to be at least 6 characters long.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>birthdate</mat-label>
+          <input matInput [matDatepicker]="picker" [max]="maxDate" ngModel name="birthDate" required />
+          <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+          <mat-checkbox ngModel name="agree" required color="primary">Agree to terms and Conditions.</mat-checkbox>
+        <button
+          type="submit"
+          mat-raised-button
+          color="primary"
+          style="margin-top: 10px"
+          [disabled]="f.invalid"
+        >
+          Submit
+        </button>
+        <mat-label>Already have an account? <a routerLink="/login">Login</a></mat-label>
+      </form>
+    </section>
+  </mat-card-content>
+</mat-card>
+
