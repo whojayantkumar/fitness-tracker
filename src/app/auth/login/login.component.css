@@ -6,8 +6,13 @@
   margin: 300px;
   padding: 30px;
 } */
+mat-card{
+  margin: 10% 10%;
 
+}
 mat-form-field{
+
   min-width: 300px;
   max-width: 350px;
 }
+
