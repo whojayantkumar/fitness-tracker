@@ -2,5 +2,5 @@
   <mat-spinner [value]="progress" mode="determinate"></mat-spinner>
   <h1>{{progress}}%</h1>
   <p>keep on going, you can do it!</p>
-  <button mat-raised-button color="accent">STOP</button>
+  <button mat-raised-button color="accent" (click)="onStop()">STOP</button>
 </section>
