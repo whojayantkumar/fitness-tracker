@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card'
 import {MatTabsModule} from '@angular/material/tabs'
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatListModule,
     MatCardModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatButtonModule,
@@ -42,7 +44,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatListModule,
     MatCardModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
 })
 export class MaterialModule {}
